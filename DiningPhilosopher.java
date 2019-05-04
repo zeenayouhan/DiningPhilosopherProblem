@@ -81,7 +81,7 @@ class Philosopher extends Thread
             System.out.println("Philosopher takes the chopstick: "+myName);
 
             chopsticks[(myName+1)%5].p(); //Acquire left chopstick
-            System.out.println("Philosopher takes the chopstick: "+(myName+1));
+            System.out.println("Philosopher takes the chopstick: "+(myName+1)%5);
 
             System.out.println("Philosophers "+myName+" eating");
             try{
@@ -95,7 +95,7 @@ class Philosopher extends Thread
             System.out.println("Philosopher releases the chopstick: "+myName);
 
             chopsticks[(myName+1)%5].v();//release left chopstick
-            System.out.println("Philosopher releases the chopstick: "+(myName+1));
+            System.out.println("Philosopher releases the chopstick: "+(myName+1)%)5;
 
         }
     }
